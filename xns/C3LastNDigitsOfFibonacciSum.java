@@ -18,6 +18,8 @@ class C3LastNDigitsOfFibonacciSum {
             arr[i] = Integer.parseInt(arrString[i]);
         }*/
 
+        //int[] arr = { 2, 3, -1, 1, 3 };
+        int[] arr = { Integer.MAX_VALUE, 8, -3, 0, 1, 3, -2, 4, 5 };
         /*System.out.println(solution(50));
         System.out.println(solution(100));
         System.out.println(solution(1000));
@@ -30,6 +32,25 @@ class C3LastNDigitsOfFibonacciSum {
         System.out.println("t: " + (System.currentTimeMillis() - t));*/
         System.out.println(solution(6));
     }
+
+    /*public static int solution(int K, int[] A) {
+        Arrays.sort(A);
+        int result = 0;
+        int j = A.length - 1;
+        int i = 0;
+        while (i < j) {
+            if (A[i] + A[j] == K) {
+                result++;
+                i++;
+                j--;
+            } else if ((A[i] + A[j]) < K) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+        return result;
+    }*/
 
     public static int solution1(int N) {
         BigInteger[] A = new BigInteger[N + 2]; // 1 extra to handle case, n = 0
@@ -49,7 +70,6 @@ class C3LastNDigitsOfFibonacciSum {
         return answer;
     }
 
-    // 95%
     public static int solution1300(int N) {
         long sum;
         long A = 0;
@@ -75,7 +95,7 @@ class C3LastNDigitsOfFibonacciSum {
         return (int) sum;
     }
 
-    // 95%
+    //95%
     public static int solution1500(int N) {
         long sum;
         long A = 0;
@@ -97,7 +117,7 @@ class C3LastNDigitsOfFibonacciSum {
         return (int) sum;
     }
 
-    // 71%
+    //71%
     public static int solution2(int N) {
         BigInteger sum;
         BigInteger A = new BigInteger("0");
@@ -127,7 +147,7 @@ class C3LastNDigitsOfFibonacciSum {
         }
     }
 
-    // 100%
+    /* function that returns nth Fibonacci number */
     public static int solution(int N) {
         long F[][] = new long[][] { { 1, 1 }, { 1, 0 } };
         if (N == 0) {

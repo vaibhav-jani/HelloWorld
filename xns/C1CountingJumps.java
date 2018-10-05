@@ -1,6 +1,4 @@
-package com.example.xns;
-
-// A Divide and Conquer based Java
+package world.hello.helloworld.xns;// A Divide and Conquer based Java
 // program for maximum subarray sum
 // problem
 
